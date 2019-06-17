@@ -46,12 +46,21 @@ gulp.task('index', function() {
         })
 })
 
+gulp.task('resume', function() {
+    return gulp.src('src/resume.pug')
+        .pipe(pug({
+            pretty: true
+        }))
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.stream())
+})
 
-gulp.task('dev', ['index'], () => {
+
+gulp.task('dev', ['index', 'resume'], () => {
     browserSync.init({
         server: {
             baseDir: './'
         }
     })
-    gulp.watch(['src/index.pug', 'style.css'], ['index'])
+    gulp.watch(['src/*', 'style.css'], ['index', 'resume'])
 })

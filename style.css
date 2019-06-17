@@ -366,3 +366,77 @@ html.cn {
     padding: .3rem 0;
     border-radius: 5px;
 }
+
+/* RESUME */
+
+.resume {
+    width: 825px;
+    max-width: 100%;
+    margin: 1em auto;
+    padding: 40px;
+    color: #333;
+}
+
+.resume a {
+    color: #0070e0;
+    text-decoration: none;
+}
+
+.resume blockquote {
+    font-family: serif;
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 2px solid #637282;
+    font-style: italic;
+}
+
+.resume > section {
+    margin: 4em 0;
+}
+
+.resume > section > article {
+    margin: 2em 0;
+}
+
+.resume .title {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.resume .sub {
+    font-size: 1em;
+    color: #637282;
+}
+
+.resume .time {
+    font-size: 1em;
+    color: #637282;
+}
+
+.resume .title + .sub, .resume .sub + .time {
+    margin-top: .5em;
+}
+
+.resume .description {
+    padding: .5em 0;
+    font-size: .85em;
+    line-height: 1.5em;
+}
+
+/* RESUME SECTIONS */
+
+.resume-self {
+    
+}
+
+.resume-self .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-self .contact-list-item {
+    display: inline-block;
+    margin-right: .5em;
+}

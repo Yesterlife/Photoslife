@@ -19,7 +19,7 @@
               <div class="date">ABOUT</div>
               <div class="content"> 
                 <h2>明</h2>
-                <p><a class="social-link" href="https://twitter.com/kalasoo">Twitter</a><a class="social-link" href="https://github.com/kalasoo">GitHub</a><a class="social-link" href="https://juejin.im/user/551d677ee4b0cd5b623f49cb">掘金</a><a class="social-link" href="mailto:ym.kalasoo@gmail.com">Mail</a></p>
+                <p><a class="social-link" href="/resume.html">简历</a><a class="social-link" href="https://twitter.com/kalasoo">Twitter</a><a class="social-link" href="https://github.com/kalasoo">GitHub</a><a class="social-link" href="https://juejin.im/user/551d677ee4b0cd5b623f49cb">掘金</a><a class="social-link" href="mailto:ym.kalasoo@gmail.com">Mail</a></p>
                 <blockquote>
                   <p>心若止水，泰然處之</p>
                 </blockquote>
@@ -312,44 +312,44 @@
     </div>
     <script>
       window.onload = function () {
-          var body = document.body
-          if (body) {
-              var screenWidth = window.innerWidth
-              var width = body.scrollWidth
-              body.scrollLeft = width - screenWidth
-          }
-          //- Model
-          var lang = localStorage.getItem('lang') || 'en'
-          //- Controller
-          var langSelections = Array.from(document.querySelectorAll('#language .meta'))
-          langSelections.forEach(function(langSelection) {
-              langSelection.addEventListener('click', function(e) {
-                  var newLang = e.target.dataset.lang
-                  changeLang(lang, newLang)
-                  lang = newLang
-                  localStorage.setItem('lang', lang)
-              })
+        var body = document.body
+        if (body) {
+          var screenWidth = window.innerWidth
+          var width = body.scrollWidth
+          body.scrollLeft = width - screenWidth
+        }
+        //- Model
+        var lang = localStorage.getItem('lang') || 'en'
+        //- Controller
+        var langSelections = Array.from(document.querySelectorAll('#language .meta'))
+        langSelections.forEach(function(langSelection) {
+          langSelection.addEventListener('click', function(e) {
+            var newLang = e.target.dataset.lang
+            changeLang(lang, newLang)
+            lang = newLang
+            localStorage.setItem('lang', lang)
           })
-          //- View
-          var html = document.querySelector('html')
-          var changeLang = function(oldLang, newLang) {
-              if (!newLang) return
-              html.classList.remove(oldLang)
-              html.classList.add(newLang)
-              langSelections.forEach(function(langSelection) {
-                  if (langSelection.dataset.lang == newLang) {
-                      langSelection.classList.add('active')
-                  } else {
-                      langSelection.classList.remove('active')
-                  }
-              })
-          }
-          changeLang(null, lang)
-          //- Cover
-          var cover = document.querySelector('.cover')
-          setTimeout(function() {
-              cover.classList.add('done')
-          }, 1000)
+        })
+        //- View
+        var html = document.querySelector('html')
+        var changeLang = function(oldLang, newLang) {
+          if (!newLang) return
+          html.classList.remove(oldLang)
+          html.classList.add(newLang)
+          langSelections.forEach(function(langSelection) {
+            if (langSelection.dataset.lang == newLang) {
+              langSelection.classList.add('active')
+            } else {
+              langSelection.classList.remove('active')
+            }
+          })
+        }
+        changeLang(null, lang)
+        //- Cover
+        var cover = document.querySelector('.cover')
+        setTimeout(function() {
+          cover.classList.add('done')
+        }, 1000)
       }
     </script>
   </body>
