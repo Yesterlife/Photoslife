@@ -440,3 +440,18 @@ html.cn {
     display: inline-block;
     margin-right: .5em;
 }
+
+/* COMMENTS BOX */
+
+.comments-box {
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: 2em;
+}
+
+.comments-box .close {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+}

@@ -29,10 +29,21 @@ html
               li.story(class=(story.highlight ? "highlight" : ""))
                 .date=story.date
                 .content!=story.content
-    a.comments(href='https://github.com/kalasoo/kalasoo.github.io/issues/1', target='_blank')
+    a.comments#comment-button
       .popup 和我聊聊
       img.boat(src='img/boat.png')
-    .cover
+    .cover.done.comments-box#comment-box
+      h1 和我聊聊
+      .close [×]
+      script(
+        src='https://utteranc.es/client.js',
+        repo='kalasoo/kalasoo.github.io',
+        issue-term='pathname',
+        theme='github-light',
+        crossorigin='anonymous'
+        async
+      )
+    .cover#cover
       h1 Ming Yin
       h2 阴明
       blockquote We can only see a short distance ahead, but we can see plenty there that needs to be done.
@@ -72,8 +83,18 @@ html
         }
         changeLang(null, lang)
         //- Cover
-        var cover = document.querySelector('.cover')
+        var cover = document.querySelector('#cover')
         setTimeout(function() {
           cover.classList.add('done')
         }, 1000)
+        //- Comment
+        var commentButton = document.querySelector('#comment-button')
+        var commentBox = document.querySelector('#comment-box')
+        var commentBoxClose = document.querySelector('#comment-box .close')
+        commentButton.addEventListener('click', function(e) {
+          commentBox.classList.remove('done')
+        })
+        commentBoxClose.addEventListener('click', function(e) {
+          commentBox.classList.add('done')
+        })
       }
