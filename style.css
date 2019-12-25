@@ -183,7 +183,8 @@ html.cn {
 }
 
 .cn main a {
-    border: 2px solid #ddd;
+    border: 4px double #ddd;
+    border-radius: 2px;
     padding: .2rem 0;
     margin: .2rem 0;
 }
