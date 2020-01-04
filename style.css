@@ -419,10 +419,33 @@ html.cn {
     margin-top: .5em;
 }
 
+.resume .logo {
+    max-width: 70px;
+    float: left;
+}
+
+.resume .title, .resume .sub, .resume .time, .resume .description {
+    margin-left: 100px;
+}
+
 .resume .description {
     padding: .5em 0;
     font-size: .9em;
     line-height: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+    .resume {
+        padding: 20px;
+    }
+
+    .resume .logo {
+        max-width: 50px;
+    }
+
+    .resume .title, .resume .sub, .resume .time, .resume .description {
+        margin-left: 70px;
+    }
 }
 
 /* RESUME SECTIONS */
